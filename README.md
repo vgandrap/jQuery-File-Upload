@@ -1,4 +1,4 @@
-# Django using jQuery File Upload Plugin
+# jQuery File Upload Plugin implementation using Django
 [jQuery-File-Upload](http://aquantum-demo.appspot.com/file-upload) was developed by Sebastian Tschan, with source on [github](https://github.com/blueimp/jQuery-File-Upload). 
 
 This branch is an implementation of the same jQuery uploader using [Django 1.7](https://docs.djangoproject.com/en/1.7/) and [Python 2.7](https://docs.python.org/2/)
