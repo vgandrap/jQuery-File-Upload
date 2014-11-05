@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/dark-hive/jquery-ui.css" id="theme">
+<head>
+    <meta charset="utf-8">
+    <title>Django jQuery File Upload Demo - jQuery UI version</title>
+    <meta name="description" content="File Upload widget with multiple file selection, drag&amp;drop support, progress bars, validation and preview images, audio and video for jQuery.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+</head>
+<body>
+    <ul class="navigation">
+      <li><a href="/">Home</a></li>
+      <li><a href="/upload/view/">Uploaded Images</a></li>
+      <li><a href="https://github.com/vgandrap/jQuery-File-Upload">Source Code</a></li>
+      <li><a href="https://github.com/blueimp/jQuery-File-Upload/wiki">Documentation</a></li>
+    </ul>
+    <h1>Django jQuery File Upload Demo</h1>
+    <h2>jQuery UI version</h2>
+        <div>
+    {% for p in pics %}
+      <a href="{{p.file.url}}" title="{{p.file.name}}" download="{{p.file.name}}" data-gallery><img src="{{p.thumbs.url}}"></a>
+    {% endfor %}
+    </div>
+</body> 
+</html>

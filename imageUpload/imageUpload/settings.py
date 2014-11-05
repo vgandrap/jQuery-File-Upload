@@ -36,7 +36,11 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'debug_toolbar.apps.DebugToolbarConfig',
+    "django_extensions",
     'fileupload',
+    'imagekit',
+    'storages',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -53,6 +57,13 @@ ROOT_URLCONF = 'imageUpload.urls'
 
 WSGI_APPLICATION = 'imageUpload.wsgi.application'
 
+#Amazon S3 Storage
+#DEFAULT_FILE_STORAGE = 'mysite.s3utils.MediaRootS3BotoStorage'
+#AWS_S3_SECURE_URLS = False       # use http instead of https
+#AWS_QUERYSTRING_AUTH = False     # don't add complex authentication-related query parameters for requests
+#AWS_UPLOAD_CLIENT_KEY_ID = '********************'     # enter your access key id
+#AWS_UOPLOAD_CLIENT_SECRET_KEY = '****************************************' # enter your secret access key
+#AWS_UPLOAD_BUCKET_NAME = 'minidjangoproject'
 
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
@@ -83,4 +94,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
+MEDIA_URL = '/media/'
+#MEDIA_subROOT = os.path.abspath(os.path.join(BASE_DIR, "vijay"))
+#MEDIA_ROOT = os.path.abspath(os.path.join(MEDIA_subROOT, "media"))
+MEDIA_ROOT = os.path.abspath(os.path.dirname(__file__)) + '/media/'
