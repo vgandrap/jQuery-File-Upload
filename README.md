@@ -1,8 +1,23 @@
 # Django using jQuery File Upload Plugin
-[jQuery-File-Upload](http://aquantum-demo.appspot.com/file-upload) developed by Sebastian Tschan, with source on [github](https://github.com/blueimp/jQuery-File-Upload). 
+[jQuery-File-Upload](http://aquantum-demo.appspot.com/file-upload) was developed by Sebastian Tschan, with source on [github](https://github.com/blueimp/jQuery-File-Upload). 
+
+This branch is an implementation of the same jQuery uploader using [Django 1.7](https://docs.djangoproject.com/en/1.7/) and [Python 2.7](https://docs.python.org/2/)
+This branch also includes an implementation of [django-imagekit](http://django-imagekit.readthedocs.org/en/latest/) to generate thumbnails.
 
 ## Demo
 [Demo File Upload](https://blueimp.github.io/jQuery-File-Upload/)
+
+## Installation details
+* Clone this repository
+* run command 'python manage.py makemigrations'
+* run command 'python manage.py migrate'
+* run the server
+* To test jquery file uploader, go to /upload/new/
+* To test imagekit thumbnail generator and download previously uploaded images, go to /upload/view/
+* To use Amazon s3 storage
+    * Uncomment the configuration in imageUpload/settings.py
+    * Add the access key and passwords
+    * Uncomment the Media root and subroot
 
 ## Features
 * **Multiple file upload:**  
@@ -40,3 +55,6 @@
 
 ## License
 Released under the [MIT license](http://www.opensource.org/licenses/MIT).
+
+### See Also
+https://github.com/blueimp/jQuery-File-Upload/wiki#python
